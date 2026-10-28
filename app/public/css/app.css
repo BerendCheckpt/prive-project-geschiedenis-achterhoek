@@ -1,0 +1,14 @@
+/* Layout-only additions to W3.CSS. Colours always come from the w3-theme classes. */
+html, body { height: 100%; }
+.app-below-nav { padding-top: 39px; }
+.app-map { height: calc(100vh - 39px); width: 100%; }
+.app-map-small { height: 320px; width: 100%; }
+.app-map-medium { height: 55vh; min-height: 320px; width: 100%; }
+.app-main-with-sidebar { margin-left: 300px; }
+.app-sidebar { width: 300px; z-index: 4; top: 39px; height: calc(100% - 39px); }
+@media (max-width: 992px) { .app-main-with-sidebar { margin-left: 0; } }
+.app-thumb { width: 100%; height: 160px; object-fit: cover; }
+.app-popup { min-width: 220px; max-width: 280px; }
+.app-clickable { cursor: pointer; }
+.app-pre-line { white-space: pre-line; }
+.ol-popup-anchor { transform: translate(-50%, calc(-100% - 12px)); }

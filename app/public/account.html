@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mijn account – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <main class="app-below-nav">
+    <div class="w3-content w3-container w3-padding-32" style="max-width:480px">
+      <h2>Mijn account</h2>
+      <div data-messages></div>
+      <div class="w3-card w3-white w3-container w3-padding-16 w3-margin-bottom">
+        <p><b>Gebruikersnaam:</b> <span id="username"></span><br><b>Rol:</b> <span id="role"></span></p>
+      </div>
+      <form class="w3-card w3-white w3-container w3-padding-16" id="password">
+        <h4>Wachtwoord wijzigen</h4>
+        <p><label>Huidig wachtwoord</label><input class="w3-input w3-border" name="currentPassword" type="password" autocomplete="current-password" required></p>
+        <p><label>Nieuw wachtwoord (minimaal 8 tekens)</label><input class="w3-input w3-border" name="newPassword" type="password" autocomplete="new-password" required minlength="8"></p>
+        <button class="w3-button w3-theme w3-round">Opslaan</button>
+      </form>
+    </div>
+  </main>
+  <script type="module" src="/js/pages/AccountPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verhaal bewerken – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/vendor/ol/ol.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+  <script src="/vendor/ol/ol.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <main class="app-below-nav">
+    <div class="w3-content w3-container w3-padding-16">
+      <h2 id="heading">Nieuw verhaal</h2>
+      <div data-messages></div>
+      <form class="w3-card w3-white w3-container w3-padding-16" id="form">
+        <p><label>Titel *</label><input class="w3-input w3-border" name="title" required maxlength="200"></p>
+        <p><label>Samenvatting</label><input class="w3-input w3-border" name="summary" maxlength="500"></p>
+        <p><label>Verhaal</label><textarea class="w3-input w3-border" name="body" rows="10" placeholder="Laat een witregel tussen alinea's."></textarea></p>
+        <div class="w3-row-padding w3-stretch">
+          <p class="w3-third"><label>Plaats</label><input class="w3-input w3-border" name="place_name" maxlength="200"></p>
+          <p class="w3-third"><label>Jaar vanaf</label><input class="w3-input w3-border" name="year_start" type="number"></p>
+          <p class="w3-third"><label>Jaar tot</label><input class="w3-input w3-border" name="year_end" type="number"></p>
+        </div>
+        <div class="w3-row-padding w3-stretch">
+          <div class="w3-half"><b>Periodes</b><div id="periods"></div></div>
+          <div class="w3-half"><b>Categorieën</b><div id="categories"></div></div>
+        </div>
+        <h4>Locatie *</h4>
+        <p class="w3-small w3-text-grey">Klik op de kaart om de locatie te kiezen.</p>
+        <div id="map" class="app-map-small w3-border"></div>
+        <div class="w3-row-padding w3-stretch">
+          <p class="w3-third"><label>Breedtegraad</label><input class="w3-input w3-border" name="lat" type="number" step="any" required></p>
+          <p class="w3-third"><label>Lengtegraad</label><input class="w3-input w3-border" name="lon" type="number" step="any" required></p>
+          <p class="w3-third"><br><button type="button" class="w3-button w3-theme-l3 w3-round" id="here">Mijn locatie</button></p>
+        </div>
+        <p><label><input class="w3-check" type="checkbox" name="published" checked> Gepubliceerd (zichtbaar voor iedereen)</label></p>
+        <p>
+          <button class="w3-button w3-theme w3-round">Opslaan</button>
+          <a class="w3-button w3-theme-l4 w3-round" href="/manage/pins.html">Terug</a>
+        </p>
+      </form>
+
+      <section class="w3-card w3-white w3-container w3-padding-16 w3-margin-top w3-hide" id="media-section">
+        <h3>Foto's, audio en video</h3>
+        <form id="upload">
+          <p><input class="w3-input w3-border" type="file" name="files" multiple accept="image/jpeg,image/png,image/webp,image/gif,audio/*,video/mp4,video/webm,video/ogg,video/quicktime" required aria-label="Bestanden"></p>
+          <p><input class="w3-input w3-border" name="caption" placeholder="Bijschrift (optioneel)" maxlength="500" aria-label="Bijschrift"></p>
+          <p><button class="w3-button w3-theme w3-round">Uploaden</button> <span id="upload-status" class="w3-small"></span></p>
+        </form>
+        <ul class="w3-ul" id="media"></ul>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="/js/pages/PinEditPage.js"></script>
+</body>
+</html>

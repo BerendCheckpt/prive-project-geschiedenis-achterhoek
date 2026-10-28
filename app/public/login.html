@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inloggen – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <main class="app-below-nav">
+    <div class="w3-content w3-container w3-padding-32" style="max-width:480px">
+      <div data-messages></div>
+      <div class="w3-card w3-white">
+        <div class="w3-bar w3-theme-l3">
+          <button class="w3-bar-item w3-button w3-half w3-theme" data-tab="login">Inloggen</button>
+          <button class="w3-bar-item w3-button w3-half" data-tab="register">Account aanmaken</button>
+        </div>
+
+        <form class="w3-container w3-padding-16" id="login">
+          <p><label>Gebruikersnaam of e-mail</label><input class="w3-input w3-border" name="username" autocomplete="username" required></p>
+          <p><label>Wachtwoord</label><input class="w3-input w3-border" name="password" type="password" autocomplete="current-password" required></p>
+          <button class="w3-button w3-theme w3-round w3-block">Inloggen</button>
+        </form>
+
+        <form class="w3-container w3-padding-16 w3-hide" id="register">
+          <p class="w3-small">Met een account kun je verhalen als favoriet bewaren.</p>
+          <p><label>Gebruikersnaam</label><input class="w3-input w3-border" name="username" autocomplete="username" required minlength="3" maxlength="32"></p>
+          <p><label>Naam (optioneel)</label><input class="w3-input w3-border" name="displayName" autocomplete="name" maxlength="100"></p>
+          <p><label>E-mail (optioneel)</label><input class="w3-input w3-border" name="email" type="email" autocomplete="email"></p>
+          <p><label>Wachtwoord (minimaal 8 tekens)</label><input class="w3-input w3-border" name="password" type="password" autocomplete="new-password" required minlength="8"></p>
+          <button class="w3-button w3-theme w3-round w3-block">Account aanmaken</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/js/pages/LoginPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaart – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/vendor/ol/ol.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+  <script src="/vendor/ol/ol.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+
+  <aside class="w3-sidebar w3-bar-block w3-collapse w3-card w3-white app-sidebar" id="filters"></aside>
+  <div class="w3-overlay w3-hide-large" id="overlay"></div>
+
+  <main class="app-main-with-sidebar app-below-nav w3-display-container">
+    <div data-messages class="w3-display-topmiddle" style="z-index:3;width:90%"></div>
+    <div id="map" class="app-map"></div>
+    <button class="w3-button w3-theme w3-round-large w3-card w3-hide-large w3-display-bottomleft w3-margin" id="open-filters">Filters <span id="filter-count"></span></button>
+    <div class="w3-display-bottomright w3-margin">
+      <button class="w3-button w3-white w3-round-large w3-card" id="locate" title="Mijn locatie volgen">◎ Mijn locatie</button>
+    </div>
+    <div class="w3-display-topright w3-margin w3-tag w3-white w3-round w3-card w3-small" id="count" style="margin-top:56px!important"></div>
+  </main>
+
+  <script type="module" src="/js/pages/MapPage.js"></script>
+</body>
+</html>

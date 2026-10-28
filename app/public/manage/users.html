@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gebruikers – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <main class="app-below-nav">
+    <div class="w3-content w3-container w3-padding-16">
+      <h2>Gebruikers</h2>
+      <p class="w3-text-grey">Iedereen kan zelf een account aanmaken. Geef hier rechten: Mapper (verhalen en routes maken), Onderhouder (categorieën, periodes, thema) of Beheerder (alles).</p>
+      <div data-messages></div>
+      <p><input class="w3-input w3-border" id="search" placeholder="Zoeken…" aria-label="Zoek gebruikers"></p>
+      <div id="users"></div>
+    </div>
+  </main>
+  <script type="module" src="/js/pages/UsersPage.js"></script>
+</body>
+</html>

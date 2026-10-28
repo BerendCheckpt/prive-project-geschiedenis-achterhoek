@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verhalen – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <aside class="w3-sidebar w3-bar-block w3-collapse w3-card w3-white app-sidebar" id="filters"></aside>
+  <div class="w3-overlay w3-hide-large" id="overlay"></div>
+
+  <main class="app-main-with-sidebar app-below-nav">
+    <div class="w3-container">
+      <h2 id="title">Verhalen</h2>
+      <button class="w3-button w3-theme w3-round w3-hide-large w3-margin-bottom" id="open-filters">Filters <span id="filter-count"></span></button>
+      <div data-messages></div>
+      <p class="w3-text-grey" id="count"></p>
+    </div>
+    <div class="w3-row-padding" id="list"></div>
+    <div w3-include-html="/components/footer.html"></div>
+  </main>
+
+  <script type="module" src="/js/pages/ListPage.js" data-kind="pins"></script>
+</body>
+</html>

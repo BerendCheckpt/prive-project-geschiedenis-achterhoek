@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verhalen beheren – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <main class="app-below-nav">
+    <div class="w3-container w3-padding-16">
+      <a href="/manage/pin-edit.html" class="w3-button w3-theme w3-round w3-right">+ Nieuw verhaal</a>
+      <h2>Verhalen beheren</h2>
+      <div data-messages></div>
+      <p><input class="w3-input w3-border" id="search" placeholder="Zoeken in de lijst…" aria-label="Zoeken"></p>
+      <div id="list"></div>
+    </div>
+  </main>
+  <script type="module" src="/js/pages/ManageListPage.js" data-kind="pins"></script>
+</body>
+</html>

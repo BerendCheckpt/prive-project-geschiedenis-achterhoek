@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verhaal – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/vendor/ol/ol.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+  <script src="/vendor/ol/ol.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <main class="app-below-nav">
+    <div class="w3-content w3-padding">
+      <div data-messages></div>
+      <article id="pin" class="w3-white w3-card w3-padding-16 w3-margin-top w3-hide">
+        <header class="w3-container">
+          <div class="w3-right">
+            <button class="w3-button w3-theme-l3 w3-round w3-hide" id="favorite" data-role="user"></button>
+            <a class="w3-button w3-theme w3-round w3-hide" id="edit">Bewerken</a>
+          </div>
+          <h1 id="title"></h1>
+          <p class="w3-text-grey" id="meta"></p>
+          <div id="tags"></div>
+        </header>
+        <div class="w3-container">
+          <p class="w3-large" id="summary"></p>
+          <div id="media"></div>
+          <div id="body"></div>
+          <h4>Locatie</h4>
+          <div id="map" class="app-map-small w3-margin-bottom"></div>
+          <div id="routes"></div>
+          <p class="w3-small w3-text-grey" id="author"></p>
+        </div>
+      </article>
+    </div>
+    <div w3-include-html="/components/footer.html"></div>
+  </main>
+  <script type="module" src="/js/pages/PinPage.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Route – Geschiedenis Achterhoek</title>
+  <link rel="stylesheet" href="/vendor/w3css/w3.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/vendor/ol/ol.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/vendor/w3js/w3.js"></script>
+  <script src="/vendor/ol/ol.js"></script>
+</head>
+<body class="w3-theme-l5">
+  <div w3-include-html="/components/navbar.html"></div>
+  <main class="app-below-nav">
+    <div data-messages class="w3-container"></div>
+    <div class="w3-row w3-hide" id="route">
+      <div class="w3-col l8 m12">
+        <div id="map" class="app-map-medium"></div>
+      </div>
+      <div class="w3-col l4 m12 w3-white">
+        <div class="w3-container w3-padding-16">
+          <a class="w3-button w3-theme w3-round w3-right w3-hide" id="edit">Bewerken</a>
+          <h2 id="title"></h2>
+          <p id="description" class="app-pre-line"></p>
+          <p class="w3-text-grey" id="summary"></p>
+
+          <div class="w3-panel w3-theme-l4 w3-padding w3-hide" id="next-stop"></div>
+          <p>
+            <button class="w3-button w3-theme-d1 w3-round w3-margin-bottom" id="follow">▶ Route volgen</button>
+          </p>
+
+          <h4>Exporteren</h4>
+          <p>
+            <select class="w3-select w3-border" id="mode" aria-label="Vervoerswijze">
+              <option value="walking">Lopen</option>
+              <option value="bicycling" selected>Fietsen</option>
+              <option value="driving">Auto</option>
+            </select>
+          </p>
+          <div class="w3-bar">
+            <a class="w3-button w3-theme-l3 w3-round w3-margin-right w3-margin-bottom" id="gpx">GPX-bestand</a>
+            <button class="w3-button w3-theme-l3 w3-round w3-margin-right w3-margin-bottom" data-app="google">Google Maps</button>
+            <button class="w3-button w3-theme-l3 w3-round w3-margin-bottom" data-app="apple">Apple Kaarten</button>
+          </div>
+          <div id="legs" class="w3-small"></div>
+
+          <h4>Stops</h4>
+          <ul class="w3-ul" id="stops"></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/js/pages/RoutePage.js"></script>
+</body>
+</html>
