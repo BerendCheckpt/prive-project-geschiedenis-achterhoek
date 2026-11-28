@@ -11,6 +11,7 @@ import { PasswordHasher } from '../src/services/PasswordHasher.js';
 
 export const TEST_DATABASE_URL = process.env.TEST_DATABASE_URL;
 export const skipWithoutDb = TEST_DATABASE_URL ? false : 'TEST_DATABASE_URL is niet gezet';
+export const RANDOM_TEST_SECRET = process.env.RANDOM_SECRET;
 
 /** Fresh schema + app for one test file. The test database is wiped. */
 export async function setupApp() {
@@ -23,7 +24,7 @@ export async function setupApp() {
   const app = createApp(container);
 
   /** Creates a user with the given role and returns a logged-in supertest agent. */
-  async function agentFor(role, username = `${role}-${Math.random().toString(36).slice(2, 8)}`) {
+  async function agentFor(role, username = `${role}-${RANDOM_TEST_SECRET}`) {
     if (role !== 'admin' || username !== 'admin') {
       await container.repos.users.insert({ username, password_hash: await hasher.hash('wachtwoord1'), role });
     }
